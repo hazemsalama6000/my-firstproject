@@ -1,8 +1,5 @@
 <template>
-    <nav>
-        <router-link to="/">Home</router-link> |
-        <router-link to="/about">About</router-link>
-    </nav>
+    <nav-header></nav-header>
     <router-view />
 </template>
 
@@ -25,6 +22,18 @@ nav {
         &.router-link-exact-active {
             color: #42b983;
         }
+        &.sss {
+            background-color: #2c3e50;
+        }
     }
 }
 </style>
+
+<script lang="ts">
+import { Options, Vue } from "vue-class-component";
+import NavHeader from "./components/NavHeader.vue";
+@Options({
+    components: { NavHeader },
+})
+export default class App extends Vue {}
+</script>
